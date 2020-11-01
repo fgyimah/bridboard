@@ -1,14 +1,36 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>BirdBoard</title>
-</head>
-<body>
-    <h1>{{ $project->title}}</h1>
-    <p>{{ $project->description  }}</p>
-</body>
-</html>
+@extends('layouts.app')
+
+@section('content')
+    <header class="flex items-center mb-3 py-4">
+        <div class="flex justify-between items-center w-full">
+            <p class="text-gray-600 font-normal text-sm">
+                <a href="/projects">My Projects</a> / {{ $project->title  }}
+            </p>
+            <a href="/projects/create" class="button">New Project</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="lg:flex -mx-3">
+            <div class="lg:w-3/4 px-3 mb-2">
+                <div class="mb-8">
+                    <h2 class="text-gray-600 font-normal text-lg mb-3">Tasks</h2>
+                    {{-- Tasks --}}
+                    <div class="card mb-3">Lorem Ipsum</div>
+                    <div class="card mb-3">Lorem Ipsum</div>
+                    <div class="card mb-3">Lorem Ipsum</div>
+                    <div class="card">Lorem Ipsum</div>
+                </div>
+
+                <div class="mb-8">
+                    <h2 class="text-gray-600 font-normal text-lg mb-3">General Notes</h2>
+                    {{--General Notes--}}
+                    <textarea class="card w-full" style="min-height: 200px;">Lorem Ipsum</textarea>
+                </div>
+            </div>
+            <div class="lg:w-1/4 px-3">
+                @include('projects.card')
+            </div>
+        </div>
+    </main>
+@endsection

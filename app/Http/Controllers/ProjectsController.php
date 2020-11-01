@@ -3,30 +3,39 @@
 namespace App\Http\Controllers;
 
 
-
 use App\Models\Project;
 
 class ProjectsController extends Controller
 {
-    public function index() {
-        $projects = Project::all();
+    public function index()
+    {
+        $projects = auth()->user()->projects;
 
         return view('projects.index', compact('projects'));
     }
 
-    public function show(Project $project) {
+    public function show(Project $project)
+    {
+        if (auth()->user()->isNot($project->owner)) {
+            abort(403);
+        }
+
         return view('projects.show', compact('project'));
     }
 
-    public function store() {
+    public function create()
+    {
+        return view('projects.create');
+    }
+
+    public function store()
+    {
         $validatedAttributes = request()->validate([
             'title' => 'required',
             'description' => 'required'
         ]);
 
-        $validatedAttributes['owner_id'] = auth()->id();
-
-        Project::create($validatedAttributes);
+        auth()->user()->projects()->create($validatedAttributes);
 
         return redirect('/projects');
     }
