@@ -28,7 +28,7 @@ class ManageProjectsTest extends TestCase
     {
         $this->withoutExceptionHandling();
 
-        $this->actingAs(User::factory()->create());
+        $this->signIn();
 
         $this->get('/projects/create')->assertStatus(200);
 
@@ -46,7 +46,7 @@ class ManageProjectsTest extends TestCase
     /** @test */
     public function fails_with_invalid_title()
     {
-        $this->actingAs(User::factory()->create());
+        $this->signIn();
 
         $attributes = Project::factory()->raw(['title' => '']);
 
@@ -56,7 +56,7 @@ class ManageProjectsTest extends TestCase
     /** @test */
     public function fails_with_invalid_description()
     {
-        $this->actingAs(User::factory()->create());
+        $this->signIn();
 
         $attributes = Project::factory()->raw(['description' => '']);
 
@@ -66,7 +66,7 @@ class ManageProjectsTest extends TestCase
     /** @test */
     public function a_user_can_view_their_project()
     {
-        $this->actingAs(User::factory()->create());
+        $this->signIn();
 
         $project = Project::factory()->create(['owner_id' => auth()->id()]);
 
@@ -99,5 +99,16 @@ class ManageProjectsTest extends TestCase
         $project = Project::factory()->create();
 
         $this->assertInstanceOf(User::class, $project->owner);
+    }
+
+    /** @test */
+    public function it_can_add_tasks()
+    {
+        $project = Project::factory()->create();
+
+        $task = $project->addTask('Test Task');
+
+        $this->assertCount(1, $project->tasks);
+        $this->assertTrue($project->tasks->contains($task));
     }
 }
