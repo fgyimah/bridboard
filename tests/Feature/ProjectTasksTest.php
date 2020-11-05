@@ -63,6 +63,19 @@ class ProjectTasksTest extends TestCase
     }
 
     /** @test */
+    public function only_project_owner_can_update_tasks_for_his_own_project()
+    {
+        $this->signIn();
+
+        $project = Project::factory()->create();
+        $task = $project->addTask('test task');
+
+        $this->patch($task->path(), [
+            'body' => 'changed'
+        ])->assertStatus(403);
+    }
+
+    /** @test */
     public function a_task_requires_a_body()
     {
         $this->signIn();
@@ -71,6 +84,22 @@ class ProjectTasksTest extends TestCase
         $attributes = Task::factory()->raw(['body' => '']);
 
         $this->post($project->path() . '/tasks', $attributes)->assertSessionHasErrors('body');
+    }
+
+    /** @test */
+    public function it_belongs_to_a_project()
+    {
+        $task = Task::factory()->create();
+
+        $this->assertInstanceOf(Project::class, $task->project);
+    }
+
+    /** @test */
+    public function it_has_a_path()
+    {
+        $task = Task::factory()->create();
+
+        $this->assertEquals('/projects/' . $task->project->id . '/tasks/' . $task->id, $task->path());
     }
 }
 
