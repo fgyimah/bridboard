@@ -22,7 +22,8 @@ class ProjectTasksTest extends TestCase
     }
 
     /** @test */
-    public function only_project_owner_can_add_tasks_to_his_own_project() {
+    public function only_project_owner_can_add_tasks_to_his_own_project()
+    {
         $this->signIn();
 
         $project = Project::factory()->create();
@@ -39,6 +40,26 @@ class ProjectTasksTest extends TestCase
 
         $this->post($project->path() . '/tasks', ['body' => 'Test Task']);
         $this->get($project->path())->assertSee('Test Task');
+    }
+
+    /** @test */
+    public function a_project_can_be_updated()
+    {
+        $this->withoutExceptionHandling();
+
+        $this->signIn();
+
+        $project = Project::factory()->create(['owner_id' => auth()->id()]);
+
+        $task = $project->addTask('test task');
+        $this->patch($project->path() . '/tasks/' . $task->id, [
+            'body' => 'changed',
+            'completed' => true
+        ]);
+        $this->assertDatabaseHas('tasks', [
+            'body' => 'changed',
+            'completed' => true
+        ]);
     }
 
     /** @test */
