@@ -4,10 +4,14 @@
     <list default="true" id="13783dc0-2bb4-4d7e-90b6-471476cd77b0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectTasksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectTasksController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Task.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/TaskFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/TaskFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_30_163053_create_projects_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_30_163053_create_projects_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/projects/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ProjectTasksTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ProjectTasksTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ManageProjectsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ManageProjectsTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +199,9 @@
       <workItem from="1604225571876" duration="2469000" />
       <workItem from="1604241135855" duration="12635000" />
       <workItem from="1604442427378" duration="2655000" />
-      <workItem from="1604614823661" duration="3459000" />
+      <workItem from="1604614823661" duration="4637000" />
+      <workItem from="1604765572340" duration="2700000" />
+      <workItem from="1604769367373" duration="1154000" />
     </task>
     <task id="LOCAL-00001" summary="added authentication">
       <created>1604176786500</created>
@@ -231,13 +237,13 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="732" y="465" width="446" height="179" key="NewPhpFileDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1604173723194" />
-    <state x="223" y="154" width="1241" height="907" key="SettingsEditor" timestamp="1604615037612">
+    <state x="223" y="154" width="1241" height="907" key="SettingsEditor" timestamp="1604769389664">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="223" y="154" width="1241" height="907" key="SettingsEditor/0.28.1920.1052@0.28.1920.1052" timestamp="1604615037612" />
-    <state x="539" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1604174051334">
+    <state x="223" y="154" width="1241" height="907" key="SettingsEditor/0.28.1920.1052@0.28.1920.1052" timestamp="1604769389664" />
+    <state x="539" y="45" width="840" height="1034" key="search.everywhere.popup" timestamp="1604769686127">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="539" y="45" width="840" height="1034" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1604174051334" />
+    <state x="539" y="45" width="840" height="1034" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1604769686127" />
   </component>
 </project>
