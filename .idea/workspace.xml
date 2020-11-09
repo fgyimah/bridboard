@@ -3,15 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="13783dc0-2bb4-4d7e-90b6-471476cd77b0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectTasksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectTasksController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Task.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_30_163053_create_projects_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_30_163053_create_projects_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/projects/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/projects/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ManageProjectsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ManageProjectsTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,6 +193,7 @@
       <workItem from="1604614823661" duration="4637000" />
       <workItem from="1604765572340" duration="2700000" />
       <workItem from="1604769367373" duration="1154000" />
+      <workItem from="1604878110500" duration="420000" />
     </task>
     <task id="LOCAL-00001" summary="added authentication">
       <created>1604176786500</created>
@@ -221,6 +213,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="added authentication" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="613" y="342" width="684" height="426" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604878208853">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="613" y="342" width="684" height="426" key="#com.intellij.fileTypes.FileTypeChooser/0.28.1920.1052@0.28.1920.1052" timestamp="1604878208853" />
     <state x="973" y="28" width="937" height="1052" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604254824795">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -233,10 +229,14 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="461" y="60" width="987" height="989" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1604176786122" />
-    <state x="732" y="465" width="446" height="179" key="NewPhpFileDialog" timestamp="1604173723194">
+    <state x="651" y="230" width="607" height="649" key="NewPhpClassDialog" timestamp="1604878498602">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="732" y="465" width="446" height="179" key="NewPhpFileDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1604173723194" />
+    <state x="651" y="230" width="607" height="649" key="NewPhpClassDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1604878498602" />
+    <state x="732" y="465" width="446" height="179" key="NewPhpFileDialog" timestamp="1604878238763">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="732" y="465" width="446" height="179" key="NewPhpFileDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1604878238763" />
     <state x="223" y="154" width="1241" height="907" key="SettingsEditor" timestamp="1604769389664">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
